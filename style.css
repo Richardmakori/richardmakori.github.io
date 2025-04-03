@@ -1,0 +1,339 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Navigation */
+nav {
+  background: #222;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Keeps the nav on top when scrolling */
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+nav ul li a:hover {
+  color: #f0a500;
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  nav ul {
+    text-align: left;
+  }
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  nav ul li a {
+    font-size: 1.2em;
+  }
+}
+
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #ed7c0b93, #76a8d4);
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.25em;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.key-strengths {
+  text-align: left;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.key-strengths h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.key-strengths ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.key-strengths ul li {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  background: white;
+  color: #ff6f61;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background: #ffdbac;
+  transform: scale(1.05);
+}
+
+/* Profile Picture */
+.hero img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 20px;
+  border: 4px solid white;
+}
+/* Educational Background Section */
+.education {
+  padding: 50px 20px;
+  background: #fff;
+  text-align: center;
+  color: black#0f0303;
+}
+
+.education h2 {
+  font-size: 2.5em;
+  color: black;
+  margin-bottom: 40px;
+}
+
+/* Cards Container - Align in a straight line (row) */
+.education-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: nowrap; /* Prevents wrapping to the next line */
+  overflow-x: auto; /* Allows scrolling if the content overflows */
+}
+
+/* Individual Education Card */
+.education-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  width: 300px; /* Adjusted width for each card */
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.education-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.education-card h3 {
+  font-size: 1.5em;
+  color: #ff6f61;
+  margin-bottom: 10px;
+}
+
+.education-card p {
+  font-size: 1.1em;
+  color: #333;
+}
+
+.education-card strong {
+  color: #ff6f61;
+}
+/* Download CV Section */
+.download-cv {
+  margin-top: 40px; /* Space between education cards and the CV download */
+  text-align: center;
+}
+
+.download-cv h2 {
+  font-size: 2em;
+  color: #ff6f61;
+  margin-bottom: 20px;
+}
+
+.download-cv .btn {
+  background-color: #ff6f61;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.download-cv .btn:hover {
+  background-color: #e04e47;
+}
+
+/* Projects Section */
+.projects {
+  padding: 50px 20px;
+  text-align: center;
+}
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+.project-card h3 {
+  color: #ff6f61;
+}
+.project-card img {
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: for rounded corners */
+}
+
+/* Skills Section */
+.skills {
+  padding: 50px 20px;
+  text-align: center;
+  background: #fff;
+}
+.skills ul {
+  list-style: none;
+  padding: 0;
+}
+.skills li {
+  display: inline-block;
+  background: #ffdbac;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+}
+/* Interests Section */
+.interests {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.interests h2 {
+  font-size: 2.5em;
+  color: black;
+  margin-bottom: 30px;
+}
+
+/* Scrollable Carousel Wrapper */
+.interests-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 20px;
+}
+
+/* Hide Scrollbar */
+.interests-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Interests Carousel */
+.interests-carousel {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Interest Item */
+.interest-item {
+  background: white(27, 182, 230);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
+  text-align: left;
+}
+
+.interest-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.interest-item h3 {
+  font-size: 1.5em;
+  color: #ff6f61;
+}
+
+.interest-item p {
+  font-size: 1.1em;
+  color: #333;
+}
+
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  padding: 50px 20px;
+  background: #222;
+  color: white;
+}
+.contact a {
+  color: #ff6f61;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 10px;
+}
+.contact a:hover {
+  color: #f0a500;
+}
+.contact-phone p {
+  font-size: 1.2em;
+  color: white;
+  margin-top: 15px;
+}
+
+.contact-phone strong {
+  color: #ff6f61;
+}
